@@ -1,0 +1,36 @@
+.title {
+    text-align: center;
+    font-size: 3rem;
+    margin-top: 5rem;
+}
+
+.container{
+    width: 95%;
+    max-width: 100rem;
+    margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+    .container{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        align-items: center;
+        gap: 4rem;
+        margin-top: 5rem;
+    }
+}
+
+.spinnerWrapper{
+  /* En mobile se verá debajo del form (normal) */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 25rem; /* para que se vea centrado verticalmente */
+}
+
+@media (min-width: 768px) {
+  .spinnerWrapper{
+    grid-column: 2 / 3;  /* fuerza la columna derecha */
+    grid-row: 1;         /* lo alinea a la misma fila del form */
+  }
+}
